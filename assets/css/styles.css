@@ -1,0 +1,600 @@
+/* styles.css */
+@import url("https://fonts.googleapis.com/css2?family=Comme&family=Inter:wght@300;400&family=Poppins:wght@200&family=Source+Sans+Pro:wght@300&display=swap");
+@import url(nutrition_plans.css);
+@import url(community_forum.css);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-weight: 600;
+  line-height: 1.5;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.text-gradient {
+  font-size: 40px;
+  background: -webkit-linear-gradient(#eee, #c80791 20%, rgb(135, 88, 0));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(85, 255, 190);
+  cursor: pointer;
+}
+
+/* Alert Messages  */
+.alert {
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  opacity: 0;
+
+  transition: opacity 0.5s ease-in-out;
+}
+
+.success {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.error {
+  background-color: #f44336;
+  color: white;
+}
+
+.show {
+  opacity: 1;
+}
+
+
+
+header h2 {
+  font-size: 4rem;
+  background: -webkit-linear-gradient(#eee, #7f025c 20%, rgb(231, 156, 18));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  background-color: #fcfcfc;
+  color: black;
+  font-weight: bold;
+}
+
+/* Navigation Bar */
+
+.navbar a {
+  font-size: 16px;
+  color: rgb(13, 0, 44);
+  text-align: center;
+  padding: 0.4rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: all 0.5s ease;
+}
+
+.navbar a:hover {
+  background: #2b4b8a;
+  color: black;
+  border-radius: 5px;
+}
+
+.navbar {
+  background-color: rgb(248, 209, 209);
+  box-shadow: 11px -19px 20px 13px rgba(0 0 0 / 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-title {
+  /* color:white; */
+  margin-right: 9px;
+}
+.logo {
+  width: 50px;
+  height: auto;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-left: 1.5rem;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  /* color: #fff; */
+  padding: 0.8rem;
+  color: rgb(0, 0, 50);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.navbar-menu a:hover {
+  color: #ff9800;
+
+  transition: 0.2s;
+}
+
+/* Navbar Toggle  */
+/* Add to your styles.css file */
+.navbar-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.toggle-bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(0, 0, 50);
+  margin: 4px 0;
+  display: block;
+  transition: 0.3s;
+}
+
+.navbar-toggle.open span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+.navbar-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-toggle.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 800px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .navbar-menu li {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+  .navbar-menu a {
+    letter-spacing: 3px;
+  }
+
+  .navbar-menu.show a {
+    display: block;
+  }
+
+  .navbar-menu.show {
+    display: flex;
+  }
+  header h2 {
+    font-size: 30px;
+  }
+  header a {
+    display: none;
+  }
+}
+
+/* Hero Section  */
+
+.hero {
+  background-image: url("../images/story-2.jpeg");
+  background-size: cover;
+  height: 400px;
+  background-position: center;
+  /* height:60vh; */
+  background-color: rgba(0 0 0 / 0.5);
+  background-blend-mode: darken;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero p {
+  color: white;
+  font-size: 24px;
+}
+
+.hero a {
+  background-color: #b40531;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.hero a:hover {
+  background-color: #810423;
+}
+
+/* Container  */
+.container.first {
+  padding: 1rem;
+  text-align: center;
+  background: linear-gradient(50deg, pink, orange);
+}
+.container {
+  text-align: center;
+}
+
+/* styles.css */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+.feature h1 {
+  flex: 2;
+}
+
+.feature {
+  width: 300px;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.feature img,
+.story img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 10px -7px 10px rbga(0 0 0 / 0.6);
+}
+
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Success Stories  */
+.success-stories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.story {
+  max-width: 100%;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.story h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .success-stories {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 800px) {
+  .success-stories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 80%;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero {
+    max-width: 100%;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+  .hero a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .story {
+    width: 100%;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .text-gradient {
+    font-size: 20px;
+  }
+  .alert{
+    font-size:15px;
+    padding:10px;
+  }
+}
+
+
+
+/* Footer styles */
+footer {
+  color: white;
+  background-image: linear-gradient(
+    111.4deg,
+    rgba(7, 7, 9, 1) 6.5%,
+    rgba(27, 24, 113, 1) 93.2%
+  );
+  min-height: 55vh;
+  padding: 1rem;
+}
+footer > p:last-child {
+  text-align: center;
+  /* margin-bottom:-2rem; */
+  padding: 1rem;
+}
+.footer-container {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.fitnesshub-description {
+  /* max-width:50%;
+   */
+  width: 300px;
+}
+
+.footer-logo,
+.footer-links,
+.footer-resources,
+.footer-contact {
+  width: 100%;
+  max-width: 250px;
+  margin-bottom: 2rem;
+}
+
+.footer-logo img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
+.footer-links ul,
+.footer-resources ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li,
+.footer-resources li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a:hover,
+.footer-resources a:hover {
+  color: #ff9800;
+}
+
+.footer-contact p {
+  margin-bottom: 0.8rem;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .footer-logo,
+  .footer-links,
+  .footer-resources,
+  .footer-contact {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-logo,
+  .footer-links,
+  .footer-resources,
+  .footer-contact {
+    width: calc(25% - 2rem);
+  }
+}
+
+@media (max-width: 500px) {
+  .fitnesshub-description {
+    width: 250px;
+  }
+}
+
+/* Workout Plans */
+.workout-plans {
+  padding: 2rem;
+  text-align: center;
+}
+
+.workout-plan-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.workout-plan-card {
+  max-width: 300px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.workout-plan-card:hover {
+  transform: translateY(-10px);
+}
+
+.workout-plan-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 9/16;
+  border-radius: 5px;
+}
+
+.workout-plan-card h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.workout-plan-link {
+  display: inline-block;
+  background-color: #6b004d;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.workout-plan-link:hover {
+  background-color: #4a0033;
+}
+
+/* Newsletter subscription  */
+/* Add the following styles to your existing CSS file */
+
+.newsletter {
+  background-color: #f5f5f5;
+  padding: 40px;
+  text-align: center;
+}
+
+.newsletter h3 {
+  margin-bottom: 20px;
+}
+
+.newsletter input[type="email"] {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.newsletter button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.newsletter button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+.alert.success-newsletter {
+  background-color: #4CAF50;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.alert.error-newsletter {
+  background-color: #f44336;
+  color: white;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .workout-plan-cards {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: no-wrap;
+  }
+}

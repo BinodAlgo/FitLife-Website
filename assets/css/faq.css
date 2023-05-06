@@ -1,0 +1,143 @@
+/* FAQ Accordiion */
+body {
+  line-height: 1.5;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+i {
+  border-radius: 50%;
+  background: red;
+  padding: 1rem;
+  color: white;
+}
+
+.text-gradient {
+  font-size: 40px;
+  background: -webkit-linear-gradient(#eee, #c80791 20%, rgb(135, 88, 0));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.back-to-home {
+  cursor: pointer;
+  color: rgb(0, 12, 52);
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.back-to-home span {
+  position: absolute;
+  top: 0;
+  color: black;
+  font-size: 1.7rem;
+  color: inherit;
+}
+.back-to-home span::after {
+  content: "Back";
+  margin-left: 0.2rem;
+  font-size: 1.7rem;
+  color: inherit;
+}
+
+
+.accordion {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  background:linear-gradient(45deg,pink,purple);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+  background-color: #ddd;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  border-top: 1px solid #f8f8f8;
+  background-color: #e5e5e5;
+}
+
+.accordion-content p {
+  margin: 0;
+  margin-right:.4rem;
+}
+
+.accordion {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.accordion-item {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: left;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.accordion-button:hover {
+  background-color: #f0f0f0;
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.accordion-content.show {
+  display: block;
+}
+
+
+@media screen and(max-width:1000px){
+  .accordion{
+    width:500px;
+    padding:2rem;
+  }
+}
+
+@media screen and (max-width:800px){
+   .back-to-home {
+    margin-bottom: 1rem;
+  }
+}
