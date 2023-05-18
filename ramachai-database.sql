@@ -26,6 +26,18 @@ CREATE TABLE `newsletter_subscription` (
 ) ENGINE=InnoDB ;
 
 
+-- create table threads 
+CREATE TABLE `threads` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `user_id` int NOT NULL,
+  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `threads_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
+);
+
 -- create table posts     
 CREATE TABLE `posts` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -44,15 +56,5 @@ CREATE TABLE `posts` (
 
 
 
--- create table threads 
-CREATE TABLE `threads` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `content` text NOT NULL,
-  `user_id` int NOT NULL,
-  `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `user_id` (`user_id`),
-  CONSTRAINT `threads_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE
-);
+
 
