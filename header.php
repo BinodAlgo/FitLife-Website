@@ -5,10 +5,10 @@ session_start();
   <nav class="navbar">
     <div class="navbar-brand">
       <h2 class="brand-title">FitLife</h2>
-      <a href="/"><img src="assets/images/fitness-logo.png" alt="brand logo" class="logo"></a>
+      <a href="index.php"><img src="assets/images/fitness-logo.png" alt="brand logo" class="logo"></a>
     </div>
     <ul class="navbar-menu">
-      <li><a href="/">Home</a></li>
+      <li><a href="index.php">Home</a></li>
       <li><a href="workout_plans.php">Workout Plans</a></li>
       <li><a href="nutrition_plans.php">Nutrition Plans</a></li>
       <li><a href="community_forum.php">Community Forum</a></li>

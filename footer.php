@@ -24,8 +24,8 @@
       <ul>
         <li><a href="#">Blog</a></li>
         <li><a href="faq.php" target="_blank">FAQ</a></li>
-        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="terms-of-service.html">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
       </ul>
     </div>
     <div class="footer-contact">
